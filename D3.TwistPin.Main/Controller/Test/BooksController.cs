@@ -22,9 +22,10 @@ namespace D3.TwistPin.Controllers
         }
 
         [HttpGet("all")]
-        public ActionResult Get()
+        public ActionResult GetAll()
         {
-            return Ok("hello");
+            var allBooks = _bookService.GetAllBooks();
+            return new JsonResult(allBooks);
         }
 
 

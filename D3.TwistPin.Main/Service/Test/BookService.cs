@@ -21,7 +21,8 @@ namespace D3.TwistPin.Service.Test
         
         public List<Book> GetAllBooks()
         {
-            return null;
+            var sql = "select * from test_book ";
+            return _db.Query<Book>(sql).ToList();
         }
 
         public Book GetBook(int bookId)
